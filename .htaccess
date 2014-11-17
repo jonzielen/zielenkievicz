@@ -1,0 +1,26 @@
+# Use PHP54 as default
+AddHandler application/x-httpd-php54 .php
+AuthUserFile "/home1/zielenki/.htpasswds/public_html/passwd"
+
+# BlueHost.com 
+# .htaccess main domain to subdirectory redirect 
+# Do not change this line. 
+RewriteEngine on 
+# Change example.com to be your main domain. 
+RewriteCond %{HTTP_HOST} ^(www.)?zielenkievicz.com$ 
+# Change 'subdirectory' to be the directory you will use for your main domain. 
+RewriteCond %{REQUEST_URI} !^/zielenkievicz/ 
+# Don't change the following two lines. 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+# Change 'subdirectory' to be the directory you will use for your main domain. 
+RewriteRule ^(.*)$ /zielenkievicz/$1 
+# Change example.com to be your main domain again. 
+# Change 'subdirectory' to be the directory you will use for your main domain 
+# followed by / then the main file for your site, index.php, index.html, etc. 
+RewriteCond %{HTTP_HOST} ^(www.)?zielenkievicz.com$ 
+RewriteRule ^(/)?$ zielenkievicz/index.html [L]
+
+Redirect 301 /r http://zielenkievicz.com/doc/Jonathan-Zielenkievicz-Resume.pdf
+
+ErrorDocument 404 /404.php
