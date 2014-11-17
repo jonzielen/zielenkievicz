@@ -20,11 +20,11 @@ return array(
            ),
            array(
                'label' => 'responsive',
-               'route' => 'landingPages',
+               'route' => 'responsive',
            ),
             array(
                'label' => 'landing pages',
-               'route' => 'responsive',
+               'route' => 'landingPages',
            ),
              array(
                'label' => 'html emails',
