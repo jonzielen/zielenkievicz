@@ -5,7 +5,9 @@
   $this->headMeta()->appendName('description', 'Pages I find useful.');
 ?>
 <header class="clearfix">
-  <a href="<?php echo $this->url('home'); ?>" id="hp-link">Jon Zielenkievicz <span>- an html5, css3, jquery, javascript, php, mysql explorer...</span></a>
+  <span id="hp-logo-wrapper">
+    <a href="<?php echo $this->url('home'); ?>" id="hp-link">Jon Zielenkievicz <span id="hp-logo-sub">- an html5, css3, jquery, javascript, php, mysql explorer...</span></a>
+  </span>
   <nav>
     <?php echo $this->navigation('navigation')->menu(); ?>
   </nav>

@@ -100,16 +100,17 @@ p a:visited {color:#000;}
 
 header #hp-link,
 header #hp-logo {font-size:3.2em;-webkit-text-stroke: 0.3px !important;text-decoration:none;color:#000;}
-header #hp-link:hover {text-decoration:underline;}
-header #hp-link span,
-header #hp-logo span {font-size:.5em;font-family:'aller_lightitalic';}
+header #hp-link:hover {text-decoration:none;}
+header #hp-logo-wrapper:hover {border-bottom:2px solid #000;}
+
+header #hp-link #hp-logo-sub {font-size:.5em;font-family:'aller_lightitalic';}
 header h1 {font-size:2.2em;}
-header h1 span {font-size:.5em;font-family:'aller_lightitalic';}
+header h1 #hp-logo-sub {font-size:.5em;font-family:'aller_lightitalic';}
 header #home-link {float:right;}
 
 nav {padding-top:8px;}
 nav ul {padding:0;margin:0;}
-nav ul li {padding:0 12px;margin:0;display:inline-block;}
+nav ul li {padding:0 24px 0 0;margin:0;display:inline-block;}
 nav ul li.hideLink {display:none;}
 nav ul li a,
 header #home-link a {color:#d60202;font-family:'aller_lightitalic';font-weight:normal !important;font-style:normal !important;font-size:1.4em;text-decoration:none;}
@@ -151,9 +152,8 @@ img {width:100%;height:auto;display:block;}
 #html-emails figure {width:46%;float:left;padding:2%;}
 
 /* links page */
-#links .body section {width:65%;float:left;}/*780px*/
+#links .body section {width:100%;}
 #links .body section a {word-wrap:break-word;}
-#links .body aside {width:31.66666%;float:right;}/*380px*/
 
 /* jquery modal */
 #overlay {position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);}
@@ -198,7 +198,7 @@ footer a:hover {text-decoration:underline;}
 }
 
 /*@media only screen and (max-width:600px) {
-  #hp-link span,
+  #hp-link #hp-logo-sub,
   aside iframe,
   .about-jon-z-img {display:none;}
   .body section {width:100% !important;}
