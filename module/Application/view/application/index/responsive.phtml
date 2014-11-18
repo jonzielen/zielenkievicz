@@ -6,9 +6,12 @@
 ?>
 <header class="clearfix">
   <a href="/" id="hp-link">Jon Zielenkievicz <span>- an html5, css3, jquery, javascript, php, mysql explorer...</span></a>
-  <h1><?php echo $this->escapeHtml($title); ?>:</h1>
+  <nav>
+    <?php echo $this->navigation('navigation')->menu(); ?>
+  </nav>
 </header>
 <div class="body clearfix">
+  <h1><?php echo $this->escapeHtml($title); ?>:</h1>
   <section>
     <article class="clearfix">
       <figure>

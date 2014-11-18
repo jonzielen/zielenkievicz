@@ -6,9 +6,12 @@
 ?>
 <header class="clearfix">
   <a href="<?php echo $this->url('home'); ?>" id="hp-link">Jon Zielenkievicz <span>- an html5, css3, jquery, javascript, php, mysql explorer...</span></a>
-  <h1><?php echo $this->escapeHtml($title); ?>:</h1>
+  <nav>
+    <?php echo $this->navigation('navigation')->menu(); ?>
+  </nav>
 </header>
 <div class="body clearfix">
+  <h1><?php echo $this->escapeHtml($title); ?>:</h1>
   <section>
     <article class="clearfix">
       <h2>View My Code:</h2>
@@ -45,9 +48,4 @@
       </ul>
     </article>
   </section>
-
-  <aside>
-    <!--<a class="twitter-timeline" href="https://twitter.com/jonzielen" data-widget-id="399669331568500736">Tweets by @jonzielen</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>-->
-  </aside>
 </div>
