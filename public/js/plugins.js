@@ -28,8 +28,9 @@
   var modalConent = '<div id="modal"></div><div id="modal-holder"><div id="modal-close">X</div><div id="modal-content-holder"></div></div>';
 
   // content to add to modal
+  //var conentToAdd = $('#modal-content').clone();
+  //$('#modal-content').remove();
   var conentToAdd = $('#modal-content').clone();
-  $('#modal-content').remove();
 
   // centers modal
   $.fn.center =  function() {
@@ -65,7 +66,7 @@
   // add modal to body
   $.fn.modal = function() {
     $('body').append(modalConent);
-    $('#modal-content-holder').append(conentToAdd);
+    //$('#modal-content-holder').append(conentToAdd);
     $('#modal-holder').center();
   };
 
@@ -76,7 +77,15 @@
 
   // launch modal
   $('.launchModal').on('click', function(e) {
+
+    if ($(this).hasClass('slide')) {
+        // initial image
+        var conentToAdd = $(this).find('img').clone();
+    };
+
+
     $(this).modal();
+    $('#modal-content-holder').append(conentToAdd);
     e.preventDefault();
   });
 

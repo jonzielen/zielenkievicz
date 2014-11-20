@@ -1,6 +1,7 @@
 $(function() {
-  $('.slideshow').each(function() {
-    var slideShowBox = '<div class="slideshowbox"><h3>Slideshow Available</h3></div>';
+  // add slideshow box
+  /*$('.slide').each(function() {
+    var slideShowBox = '<div class="slideshowbox"></div>';
     $(this).append(slideShowBox);
-  });
+  });*/
 });
