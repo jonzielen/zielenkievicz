@@ -25,7 +25,7 @@
 // MODAL PLUGIN
 (function($) {
   // basic modal
-  var modalConent = '<div id="modal"></div><div id="modal-holder"><div id="modal-close">X</div><div id="modal-content-holder"></div></div>';
+  var modalConent = '<div id="modal"></div><div id="modal-holder"><div id="modal-content-holder"><div id="modal-close">X</div></div></div>';
 
   // content to add to modal
   //var conentToAdd = $('#modal-content').clone();
@@ -49,10 +49,10 @@
         'margin-right':0
       });
 
-      $('#modal-close').css({
+      /*$('#modal-close').css({
         'right':0,
         'top':(-55)+'px'
-      });
+      });*/
     };
   };
 
@@ -64,9 +64,9 @@
   };
 
   // add modal to body
-  $.fn.modal = function() {
+  $.fn.modal = function(conentToAdd) {
     $('body').append(modalConent);
-    //$('#modal-content-holder').append(conentToAdd);
+    $('#modal-content-holder').append(conentToAdd);
     $('#modal-holder').center();
   };
 
@@ -77,15 +77,13 @@
 
   // launch modal
   $('.launchModal').on('click', function(e) {
+    // check if image was clicked
+    var isImg = $(e.target).is('img');
 
-    if ($(this).hasClass('slide')) {
-        // initial image
-        var conentToAdd = $(this).find('img').clone();
+    if (isImg) {
+      var conentToAdd = $(e.target).clone();
+      $(this).modal(conentToAdd);
     };
-
-
-    $(this).modal();
-    $('#modal-content-holder').append(conentToAdd);
     e.preventDefault();
   });
 
