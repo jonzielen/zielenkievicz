@@ -411,11 +411,17 @@ footer {
 
 #modal-close {
   position:absolute;
-  top:-26px;
-  right:0;
-  background-color:#fff;
-  padding:2px 6px;
+  top:-12px;
+  right:-10px;
   cursor:pointer;
+  text-align:center;
+  color:#fff;
+  border-radius:50%;
+  behavior:url(PIE.htc);
+  width:20px;
+  height:20px;
+  background-color:#000;
+  border:2px solid #fff;
 }
 
 #modal-holder {

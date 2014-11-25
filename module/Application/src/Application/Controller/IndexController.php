@@ -14,53 +14,71 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
-    public $motto;
-
     public function __construct() {
         $this->motto = 'Jon Zielenkievicz <span id="hp-logo-sub">- an html5, css3, jquery, javascript, php, mysql explorer...</span>';
     }
 
     public function indexAction()
     {
-        $this->motto = 'Jon Zielenkievicz <span id="hp-logo-sub">- an html5, css3, jquery, javascript, php, mysql explorer...</span>';
         $this->bodyId('homepage');
-        return new ViewModel();
+        return new ViewModel(array(
+                'motto' => $this->motto
+            )
+        );
     }
 
     public function sitesAction()
     {
         $this->bodyId('sites');
-        return new ViewModel();
+        return new ViewModel(array(
+                'motto' => $this->motto
+            )
+        );
     }
 
     public function responsiveAction()
     {
         $this->bodyId('responsive');
-        return new ViewModel();
+        return new ViewModel(array(
+                'motto' => $this->motto
+            )
+        );
     }
 
     public function landingPagesAction()
     {
         $this->bodyId('landing-pages');
-        return new ViewModel();
+        return new ViewModel(array(
+                'motto' => $this->motto
+            )
+        );
     }
 
     public function htmlEmailsAction()
     {
         $this->bodyId('html-emails');
-        return new ViewModel();
+        return new ViewModel(array(
+                'motto' => $this->motto
+            )
+        );
     }
 
     public function linksAction()
     {
         $this->bodyId('links');
-        return new ViewModel();
+        return new ViewModel(array(
+                'motto' => $this->motto
+            )
+        );
     }
 
     public function webAppsAction()
     {
         $this->bodyId('webapps');
-        return new ViewModel();
+        return new ViewModel(array(
+                'motto' => $this->motto
+            )
+        );
     }
 
     public function bodyId($bodyID) {
