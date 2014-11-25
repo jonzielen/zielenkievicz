@@ -127,33 +127,55 @@ header #home-link a:hover {text-decoration:underline;/*font-family:'alleritalic'
 img {width:100%;height:auto;display:block;}
 
 /* figure styles */
-#sites figure,
-#responsive figure,
-#landing-pages figure {
-  width:100%;
-  padding-bottom:26px;
-  border-bottom:1px solid #ccc;
-  margin:0 0 14px 0;
+#sites,
+#responsive,
+#landing-pages,
+#webapps {
+  figure {
+    width:100%;
+    padding-bottom:26px;
+    border-bottom:1px solid #ccc;
+    margin:0 0 14px 0;
+
+    a,
+    .left {
+      width:60%;
+      float:left;
+      display:block;
+      overflow:hidden;
+    }
+
+    img {
+      max-width:700px;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+
+      &:hover {
+        -moz-transform:scale(1.03,1.03);
+        -webkit-transform:scale(1.03,1.03);
+        -o-transform:scale(1.03,1.03);
+        -ms-transform:scale(1.03,1.03);
+        transform:scale(1.03,1.03);
+      }
+    }
+
+    figcaption {
+      width:38%;
+      float:left;
+      padding-left:2%;
+    }
+  }
+  figure:after {
+    content:'.';
+    clear: both;
+    display: block;
+    height: 0px;
+    text-indent: -999999em;
+  }
 }
-#sites figure:after,
-#responsive figure:after,
-#landing-pages figure:after {
-  content:'.';
-  clear: both;
-  display: block;
-  height: 0px;
-  text-indent: -999999em;
-}
-#sites figure a,
-#responsive figure a,
-#landing-pages figure a,
-figure .left {width:60%; float:left; display:block;}
-#sites  figure img,
-#responsive figure img,
-#landing-pages figure img {max-width:700px;}
-#sites figure figcaption,
-#responsive figure figcaption,
-#landing-pages figure figcaption {width:38%;float:left;padding-left:2%;}
 
 .lastFig {
   border-bottom:none !important;
@@ -161,7 +183,27 @@ figure .left {width:60%; float:left; display:block;}
 }
 
 /* html email */
-#html-emails figure {width:46%;float:left;padding:2%;}
+#html-emails figure {
+  width:46%;
+  float:left;
+  padding:2%;
+
+  img {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    &:hover {
+      -moz-transform:scale(1.03,1.03);
+      -webkit-transform:scale(1.03,1.03);
+      -o-transform:scale(1.03,1.03);
+      -ms-transform:scale(1.03,1.03);
+      transform:scale(1.03,1.03);
+    }
+  }
+}
 
 /* links page */
 #links .body section {width:100%;}
@@ -170,9 +212,25 @@ figure .left {width:60%; float:left; display:block;}
 /* about page */
 .about-jon-z-img {width:19.11764%;height:auto;}
 
-footer {text-align:center;padding:0 0 20px 0;}
-footer a {text-decoration:none;color:#000;}
-footer a:hover {text-decoration:underline;}
+footer {
+  text-align:center;
+  padding:0 0 20px 0;
+
+  a {
+    text-decoration:none;
+    color:#000;
+    -webkit-transition:all 0.5s ease;
+    -moz-transition:all 0.5s ease;
+    -ms-transition:all 0.5s ease;
+    -o-transition:all 0.5s ease;
+    transition:all 0.5s ease;
+
+    &:hover {
+      text-decoration:underline;
+      color:#d60202
+    }
+  }
+}
 
 .notMmaintained {
   text-decoration:none;
@@ -182,6 +240,7 @@ footer a:hover {text-decoration:underline;}
 .slide {
   position:relative;
   overflow:hidden;
+  display:block;
 
   .slideshowbox {
     position:absolute;
@@ -242,16 +301,35 @@ footer a:hover {text-decoration:underline;}
   nav ul li {padding:0 6px !important;}
   nav ul li a {font-size:1.2em !important;}
 
-  #sites figure a,
-  #responsive figure a,
-  #landing-pages figure a,
-  figure .left {max-width:100%;width:100%;height:auto;float:left;display:block;}
-  #sites  figure img,
-  #responsive figure img,
-  #landing-pages figure img {max-width:100%;width:100%;height:auto;display:block;}
-  #sites figure figcaption,
-  #responsive figure figcaption,
-  #landing-pages figure figcaption {max-width:100%;width:100%;float:left;padding:16px 0 0 0;}
+  #sites,
+  #responsive,
+  #landing-pages,
+  #webapps {
+    figure {
+      width:100%;
+
+      a,
+      .left {
+        max-width:100%;
+        width:100%;
+        height:auto;
+        float:left;
+        display:block;
+      }
+      img {
+        max-width:100%;
+        width:100%;
+        height:auto;
+        display:block;
+      }
+      figcaption {
+        max-width:100%;
+        width:100%;
+        float:left;
+        padding:16px 0 0 0;
+      }
+    }
+  }
 
   #html-emails figure {width:100%;float:left;padding:4% 0;}
   #html-emails figure img {width:100%;}
@@ -272,10 +350,6 @@ footer a:hover {text-decoration:underline;}
       }
     }
   }
-
-
-
-
 }
 
 @media only screen and (max-width:600px) {
@@ -285,16 +359,35 @@ footer a:hover {text-decoration:underline;}
   .body section {width:100% !important;}
   nav ul li {padding:0 6px !important;}
   nav ul li a {font-size:1em !important;}
-  #sites figure a,
-  #responsive figure a,
-  #landing-pages figure a,
-  figure .left {max-width:100%;width:100%;height:auto;float:left;display:block;}
-  #sites  figure img,
-  #responsive figure img,
-  #landing-pages figure img {max-width:100%;width:100%;height:auto;display:block;}
-  #sites figure figcaption,
-  #responsive figure figcaption,
-  #landing-pages figure figcaption {max-width:100%;width:100%;float:left;padding:16px 0 0 0;}
+
+  #sites,
+  #responsive,
+  #landing-pages,
+  #webapps {
+    figure {
+      a,
+      .left {
+        max-width:100%;
+        width:100%;
+        height:auto;
+        float:left;
+        display:block;
+      }
+
+      img {
+        max-width:100%;
+        width:100%;
+        height:auto;
+        display:block;
+      }
+      figcaption {
+        max-width:100%;
+        width:100%;
+        float:left;
+        padding:16px 0 0 0;
+      }
+    }
+  }
 }
 
 /* MODAL STYLES */

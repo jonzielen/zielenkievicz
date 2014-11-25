@@ -14,8 +14,15 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+    public $motto;
+
+    public function __construct() {
+        $this->motto = 'Jon Zielenkievicz <span id="hp-logo-sub">- an html5, css3, jquery, javascript, php, mysql explorer...</span>';
+    }
+
     public function indexAction()
     {
+        $this->motto = 'Jon Zielenkievicz <span id="hp-logo-sub">- an html5, css3, jquery, javascript, php, mysql explorer...</span>';
         $this->bodyId('homepage');
         return new ViewModel();
     }
@@ -47,6 +54,12 @@ class IndexController extends AbstractActionController
     public function linksAction()
     {
         $this->bodyId('links');
+        return new ViewModel();
+    }
+
+    public function webAppsAction()
+    {
+        $this->bodyId('webapps');
         return new ViewModel();
     }
 

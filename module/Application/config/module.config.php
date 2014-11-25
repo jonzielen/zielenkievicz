@@ -70,6 +70,16 @@ return array(
                     ),
                 ),
             ),
+            'webApps' => array(
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => array(
+                    'route'    => '/web-apps',
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'webApps',
+                    ),
+                ),
+            ),
 
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new

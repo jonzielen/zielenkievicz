@@ -26,6 +26,10 @@ return array(
                'label' => 'landing pages',
                'route' => 'landingPages',
            ),
+            array(
+               'label' => 'web apps',
+               'route' => 'webApps',
+           ),
              array(
                'label' => 'html emails',
                'route' => 'htmlEmails',

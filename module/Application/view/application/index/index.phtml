@@ -3,7 +3,7 @@
   $this->headMeta()->appendName('description', 'Jon Zielenkievicz - an html5, css3, jquery, javascript, php, mysql, object oriented programming, git, web developer');
 ?>
 <header class="clearfix">
-  <h1 id="hp-logo">Jon Zielenkievicz <span id="hp-logo-sub">- an html5, css3, jquery, javascript, php, mysql explorer...</span></h1>
+  <h1 id="hp-logo"><?php echo $this->motto; ?></h1>
   <nav>
     <?php echo $this->navigation('navigation')->menu(); ?>
   </nav>
@@ -13,6 +13,7 @@
     <article class="clearfix">
       <h2>Welcome!</h2>
       <p>Hi, I'm Jon, a Web Developer at <a href="http://www.flycommunications.com/" target="_blank">Fly Communications</a>.</p>
+      <p>From 2008 to 2013 I worked at <a href="http://sankyinc.com/" target="_blank">Sanky Communications</a> developing web sites.</p>
       <p>I enjoy building web sites, pages and html emails using html5, css3, jquery and php. Within these pages you will find some examples of my work.</p>
       <p class="italic">Enjoy!</p>
     </article>
