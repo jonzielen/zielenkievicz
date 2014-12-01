@@ -93,10 +93,18 @@ h1, h2, h3, h4, h5 {
   color:#000;
 }
 
+#homepage {
+  p a {
+    color:#d60202;
+  }
+}
+
 p {font-size:1.25em;line-height:1.35em;font-weight:normal !important;font-style:normal !important;}
-p a {color:#d60202;font-family:'aller_lightitalic';font-weight:normal !important;font-style:normal !important;}
+p a {color:#000;font-family:'aller_lightitalic';font-weight:normal !important;font-style:normal !important;text-decoration:underline;}
 p a:hover {text-decoration:none;}
-p a:visited {color:#000;}
+ul a {color:#000;font-weight:normal !important;font-style:normal !important;text-decoration:none;}
+ul a:hover {text-decoration:underline;}
+/*p a:visited {color:#000;}*/
 
 header #hp-link,
 header #hp-logo {font-size:3.2em;-webkit-text-stroke: 0.3px !important;text-decoration:none;color:#000;}
