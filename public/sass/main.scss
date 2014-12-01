@@ -384,6 +384,9 @@ footer {
 }
 
 @media only screen and (max-width:600px) {
+  .logos-area {
+    display:none;
+  }
   #hp-link #hp-logo-sub,
   aside iframe,
   .about-jon-z-img {display:none;}
