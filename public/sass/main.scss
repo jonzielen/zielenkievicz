@@ -97,6 +97,29 @@ h1, h2, h3, h4, h5 {
   p a {
     color:#d60202;
   }
+
+  .logos-area {
+    float:right;
+    width:33%;
+    padding:90px 0 10px 20px;
+
+    .homepage-right-logos {
+      display:block;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+
+      &:hover {
+        -moz-transform:scale(1.03,1.03);
+        -webkit-transform:scale(1.03,1.03);
+        -o-transform:scale(1.03,1.03);
+        -ms-transform:scale(1.03,1.03);
+        transform:scale(1.03,1.03);
+      }
+    }
+  }
 }
 
 p {font-size:1.25em;line-height:1.35em;font-weight:normal !important;font-style:normal !important;}
