@@ -18,45 +18,52 @@
     <article class="clearfix">
       <figure>
         <h2>Jimmy Fallon Tickets</h2>
-        <div class="left launchModal slide">
+        <a href="https://github.com/jonzielen/jf-tickets" target="_blank" class="left slide">
           <img src="/img/web-apps/jimmy-fallon/jf-1.jpg" alt="The Tonight Show starring Jimmy Fallon" />
-          <div class="slideshowbox">
+          <div class="launchModal slideshowbox">
             <img src="/img/web-apps/jimmy-fallon/jf-ticket.png" alt="Jimmy Fallon Ticket" />
           </div>
-        </div>
+        </a>
 
         <figcaption>
           <h3>Resources:</h3>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Blackbaud NetCommunity</li>
+            <li>Object Oriented PHP</li>
+            <li>JSON</li>
+            <li>Cron</li>
           </ul>
 
           <h3>Responsibilities:</h3>
           <ul>
-            <li>Build, maintain and update site</li>
+            <li>Run app once every minute, via cron</li>
+            <li>Parse JSON object for available tickets</li>
+            <li>Store/remove ticket dates from list</li>
+            <li>Email user ticket date/link/availability of dates that have changed status availability (either on sale or sold out)</li>
           </ul>
         </figcaption>
       </figure>
 
       <figure class="lastFig">
         <h2>Ryan Adams - PAXAM</h2>
-        <div class="left">
+        <a href="https://github.com/jonzielen/dra-page-parser" class="left" target="_blank">
           <img src="/img/web-apps/dra/paxam.jpg" alt="Ryan Adams - PAXAM" />
-        </div>
+        </a>
 
         <figcaption>
           <h3>Resources:</h3>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Blackbaud NetCommunity</li>
+            <li>Object Oriented PHP</li>
+            <li>Regular Expressions</li>
+            <li>Cron</li>
           </ul>
 
           <h3>Responsibilities:</h3>
           <ul>
-            <li>Build, maintain and update site</li>
+            <li>Run app once every five minutes, via cron</li>
+            <li>Loop through and compile each page of the online store</li>
+            <li>Use regular expressions to parse code, compile array of items (and their price/image url/title)</li>
+            <li>Check titles against list of existing items</li>
+            <li>Email user with list of new items (price/image/link)</li>
           </ul>
         </figcaption>
       </figure>
