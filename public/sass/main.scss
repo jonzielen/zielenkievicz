@@ -131,10 +131,11 @@ figcaption ul ul {
   margin:5px 0;
 }
 a {
-  outline:none;
-
-  &:active{
+  &:active,
+  &:selected,
+  &:visited {
     background-color:transparent;
+    outline:none;
   }
 }
 /*p a:visited {color:#000;}*/
