@@ -127,6 +127,9 @@ p a {color:#000;font-family:'aller_lightitalic';font-weight:normal !important;fo
 p a:hover {text-decoration:none;}
 ul a {color:#000;font-weight:normal !important;font-style:normal !important;text-decoration:none;}
 ul a:hover {text-decoration:underline;}
+figcaption ul ul {
+  margin:5px 0;
+}
 /*p a:visited {color:#000;}*/
 
 header #hp-link,
