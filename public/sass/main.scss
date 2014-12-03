@@ -130,6 +130,13 @@ ul a:hover {text-decoration:underline;}
 figcaption ul ul {
   margin:5px 0;
 }
+a {
+  outline:none;
+
+  &:active{
+    background-color:transparent;
+  }
+}
 /*p a:visited {color:#000;}*/
 
 header #hp-link,
