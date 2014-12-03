@@ -131,11 +131,24 @@ figcaption ul ul {
   margin:5px 0;
 }
 a {
-  &:active,
-  &:selected,
+  background-color:transparent !important;
+  outline:none !important;
+  border:none !important;
+
+  &:active {
+    background-color:transparent !important;
+    outline:none !important;
+    border:none !important;
+  }
+  &:selected {
+    background-color:transparent !important;
+    outline:none !important;
+    border:none !important;
+  }
   &:visited {
-    background-color:transparent;
-    outline:none;
+    background-color:transparent !important;
+    outline:none !important;
+    border:none !important;
   }
 }
 /*p a:visited {color:#000;}*/
