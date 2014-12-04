@@ -369,6 +369,7 @@ footer {
         max-width:100%;
         width:100%;
         height:auto;
+        max-height:100% !important;
         float:left;
         display:block;
       }
@@ -377,6 +378,7 @@ footer {
         width:100%;
         height:auto;
         display:block;
+        border:none;
       }
       figcaption {
         max-width:100%;
@@ -409,6 +411,7 @@ footer {
 }
 
 @media only screen and (max-width:600px) {
+  body {padding:0;}
   .logos-area {
     display:none;
   }
