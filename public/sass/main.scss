@@ -346,10 +346,11 @@ footer {
 @media only screen and (max-width:800px) {
   #wrapper {
     padding:0;
+    margin:0;
   }
   header,
   .body,
-  footer {width:97%;margin:0 auto;}
+  footer {width:95%;margin:0 auto;}
 
 
   aside {display:none;}
@@ -411,7 +412,7 @@ footer {
 }
 
 @media only screen and (max-width:600px) {
-  body {padding:0;}
+  body {padding:0;margin:0;}
   .logos-area {
     display:none;
   }
