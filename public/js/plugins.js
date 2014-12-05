@@ -77,13 +77,17 @@
 
   // launch modal
   $('.launchModal').on('click', function(e) {
-    // check if image was clicked
-    var isImg = $(e.target).is('img');
+    // check if screen width is over 700px
+    if ($(window).width() >= 700) {
+      // check if image was clicked
+      var isImg = $(e.target).is('img');
 
-    if (isImg) {
-      var conentToAdd = $(e.target).clone();
-      $(this).modal(conentToAdd);
+      if (isImg) {
+        var conentToAdd = $(e.target).clone();
+        $(this).modal(conentToAdd);
+      };
     };
+
     e.preventDefault();
   });
 
