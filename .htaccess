@@ -1,0 +1,16 @@
+# Use PHP54 as default
+AddHandler application/x-httpd-php54 .php
+AuthUserFile "/home1/zielenki/.htpasswds/public_html/passwd"
+
+RewriteEngine on
+# internal rewrite - every request goes to /zielenkievicz/public/
+#RewriteCond %{HTTP_HOST} !^tickets\.zielenkievicz\.com
+#RewriteRule ^(.*)$ /zielenkievicz/public/$1 [NC]
+
+# Exclude any subdomain:
+RewriteCond %{HTTP_HOST} !^(.*)\.(.*)\. [NC]
+# redirect
+RewriteRule ^(.*)$ /zielenkievicz/public/$1 [NC]
+
+# additional redirects
+Redirect 301 /r http://zielenkievicz.com/doc/Jonathan-Zielenkievicz-Resume.pdf
