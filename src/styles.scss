@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100vh;
+}
+
+.main-wrapper {
+  height: 100vh;
+}
+
+header, main, footer {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+}

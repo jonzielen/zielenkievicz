@@ -1,11 +1,19 @@
-<div class="row">
-  <div class="col-12">
-    <app-nav></app-nav>
-  </div>
-</div>
+<div class="container main-wrapper d-flex align-items-start flex-column">
+  <header class="row">
+    <div class="col-12">
+      <app-nav></app-nav>
+    </div>
+  </header>
 
-<div class="row">
-  <div class="col-12">
-    <router-outlet></router-outlet>
-  </div>
+  <main class="row mb-auto">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <footer class="row mb-2">
+    <div class="col-12">
+      &copy; 2020 Jon Z.
+    </div>
+  </footer>
 </div>
